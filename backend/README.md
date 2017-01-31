@@ -1,4 +1,4 @@
-# Socializa backend [![Build Status](https://travis-ci.org/wadobo/socializa.svg?branch=master)](https://travis-ci.org/wadobo/socializa) [![Coverage Status](https://coveralls.io/repos/github/wadobo/socializa/badge.svg?branch=master)](https://coveralls.io/github/wadobo/socializa?branch=master) [![Requirements Status](https://requires.io/github/wadobo/socializa/requirements.svg?branch=master)](https://requires.io/github/wadobo/socializa/requirements/?branch=master)
+# Socializa backend [![Build Status](https://travis-ci.org/wadobo/socializa.svg?branch=master)](https://travis-ci.org/wadobo/socializa) [![Coverage Status](https://coveralls.io/repos/github/wadobo/socializa/badge.svg?branch=master)](https://coveralls.io/github/wadobo/socializa?branch=master) [![Requirements Status](https://requires.io/github/wadobo/socializa/requirements.svg?branch=master)](https://requires.io/github/wadobo/socializa/requirements/?branch=master) [![Quality Gate](https://sonarqube.com/api/badges/gate?key=socializa:sonarqube)](https://sonarqube.com/dashboard/index?id=socializa%3Asonarqube)
 
 # Create postgis database
 
