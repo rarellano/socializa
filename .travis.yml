@@ -26,5 +26,6 @@ script:
   - cd backend
   - python manage.py test --keepdb
   - coverage run --source='.' manage.py test --keepdb
+  - cd ..
   - sonar-scanner
 after_success: coveralls
