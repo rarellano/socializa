@@ -9,9 +9,9 @@ addons:
       packages:
         - postgresql-9.5-postgis-2.3
     sonarqube:
-    branches:
-      - master
-      - sonarqube
+        branches:
+          - master
+          - sonarqube
 before_script:
   - psql -U postgres -c "create user socializa password 'socializa'"
   - psql -U postgres -c "create database test_socializa owner socializa"
