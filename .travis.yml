@@ -24,8 +24,9 @@ install:
   - pip install coveralls
 script:
   - cd backend
-  - python manage.py test --keepdb
-  - coverage run --source='.' manage.py test --keepdb
+  - pylint -f parseable --ignore-patterns="env/" * | tee pylint.out
+  - coverage run --source='.' manage.py test --keepdb --with-xunit
+  - coverage xml
   - cd ..
   - sonar-scanner
 after_success: coveralls
