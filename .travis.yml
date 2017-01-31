@@ -1,7 +1,14 @@
+dist: trusty
+sudo: required
+
 services:
   - postgresql
 addons:
     postgresql: "9.4"
+    sonarqube:
+    branches:
+      - master
+      - sonarqube
 before_script:
   - psql -U postgres -c "create user socializa password 'socializa'"
   - psql -U postgres -c "create database test_socializa owner socializa"
@@ -13,6 +20,7 @@ install:
   - pip install -r backend/requirements.txt
   - pip install coveralls
 script:
+  - sonar-scanner
   - cd backend
   - python manage.py test --keepdb
   - coverage run --source='.' manage.py test --keepdb
