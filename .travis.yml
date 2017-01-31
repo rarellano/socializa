@@ -27,6 +27,8 @@ script:
   - pylint -f parseable --ignore-patterns="env/" * | tee pylint.out
   - coverage run --source='.' manage.py test --keepdb --with-xunit
   - coverage xml
+  - ls -la
   - cd ..
   - sonar-scanner
+  - ls -la
 after_success: coveralls
