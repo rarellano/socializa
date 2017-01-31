@@ -4,7 +4,10 @@ sudo: required
 services:
   - postgresql
 addons:
-    postgresql: "9.4"
+    postgresql: "9.5"
+    apt:
+      packages:
+        - postgresql-9.5-postgis-2.3
     sonarqube:
     branches:
       - master
@@ -20,8 +23,8 @@ install:
   - pip install -r backend/requirements.txt
   - pip install coveralls
 script:
-  - sonar-scanner
   - cd backend
   - python manage.py test --keepdb
   - coverage run --source='.' manage.py test --keepdb
+  - sonar-scanner
 after_success: coveralls
